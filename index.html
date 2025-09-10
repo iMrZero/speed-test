@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>SpeedCheck - Test Your Internet Speed</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#111c22]"
+    style="font-family: 'Space Grotesk', 'Noto Sans', sans-serif"
+  >
+    <div
+      class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <main
+          class="flex flex-1 flex-col items-center justify-center px-4 py-10 text-center"
+        >
+          <div class="w-full max-w-2xl">
+            <h2
+              class="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl"
+            >
+              Measure Your Internet Speed
+            </h2>
+            <p class="mx-auto mt-4 max-w-[600px] text-lg text-white/70">
+              Discover your download and upload speeds with a single click. Our
+              tool provides a quick and accurate analysis of your connection.
+            </p>
+            <div class="mt-8">
+              <button
+                class="run-test inline-flex h-14 w-56 items-center justify-center rounded-full bg-[var(--primary-color)] px-8 text-lg font-bold text-white shadow-lg shadow-[var(--primary-color)]/20 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-300 dark:focus:ring-sky-800"
+              >
+                <span class="truncate">Start Test</span>
+              </button>
+            </div>
+            <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div
+                class="download-section flex flex-col items-center justify-center rounded-xl bg-white/5 p-8 backdrop-blur-sm"
+              >
+                <div class="flex items-center gap-3 text-white">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[var(--primary-color)]"
+                  >
+                    download
+                  </span>
+                  <p class="text-xl font-medium">Download</p>
+                </div>
+                <p
+                  class="download-speed mt-2 text-5xl font-bold tracking-tighter text-white"
+                >
+                  -- Mbps
+                </p>
+                <div class="progress" id="progress"></div>
+              </div>
+              <div
+                class="download-section flex flex-col items-center justify-center rounded-xl bg-white/5 p-8 backdrop-blur-sm"
+              >
+                <div class="flex items-center gap-3 text-white">
+                  <span
+                    class="material-symbols-outlined text-4xl text-[var(--primary-color)]"
+                  >
+                    upload
+                  </span>
+                  <p class="text-xl font-medium">Upload</p>
+                </div>
+                <p
+                  class="upload-speed mt-2 text-5xl font-bold tracking-tighter text-white"
+                >
+                  -- Mbps
+                </p>
+                <div class="progress" id="progress-up"></div>
+              </div>
+            </div>
+            <div
+              class="mt-12 rounded-xl bg-white/5 p-6 text-left backdrop-blur-sm"
+            >
+              <h3 class="text-lg font-semibold text-white">
+                Your Connection Details
+              </h3>
+              <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="flex items-center gap-3">
+                  <p class="font-medium text-white/60">IP Address:</p>
+                  <p class="your-ip font-mono text-white">192.168.1.1</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <p class="font-medium text-white/60">Location:</p>
+                  <p class="your-location text-white">San Francisco, CA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

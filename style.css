@@ -1,0 +1,16 @@
+* {
+  user-select: none;
+}
+.download-section {
+  position: relative;
+  & .progress {
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: #13a4ec;
+    left: 0;
+    bottom: 0;
+    border-radius: 50vw;
+    transition: 0.3s;
+  }
+}
